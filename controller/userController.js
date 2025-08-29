@@ -279,7 +279,7 @@ exports.login= async (req,res)=>{
 
     res.cookie("refresh_token", retoken, {
     httpOnly: true,
-    secure: false, // only over HTTPS
+    secure: true , // only over HTTPS
     sameSite: "Strict", // or 'Lax' depending on your flow
     maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
   });
